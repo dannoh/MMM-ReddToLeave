@@ -1,0 +1,30 @@
+{
+  "name": "mmm-reddtoleave",
+  "version": "1.0.0",
+  "description": "Show when you should leave to arrive on time to your calendar events",
+  "main": "MMM-ReddToLeave.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dannoh/MMM-ReddToLeave.git"
+  },
+  "keywords": [
+    "magicmirror redd reddtoleave"
+  ],
+  "author": "Dan Forsyth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dannoh/MMM-ReddToLeave/issues"
+  },
+  "homepage": "https://github.com/dannoh/MMM-ReddToLeave#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.10.0",
+    "@stylistic/eslint-plugin": "^2.7.2",
+    "eslint": "^9.10.0",
+    "globals": "^15.9.0"
+  }
+}

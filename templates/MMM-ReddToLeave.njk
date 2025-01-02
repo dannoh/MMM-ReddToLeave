@@ -1,0 +1,36 @@
+<!--
+	Use ` | safe` to allow html tages within the text string.
+	https://mozilla.github.io/nunjucks/templating.html#autoescaping
+-->
+<div>
+{% for item in displayItems %}
+	<div style="margin-bottom:40px">
+			<div class="small bright">{{item.calendarItem.title}}</div>
+			<div class="xsmall light">{{item.calendarItem.location}}</div>
+			<table class="xsmall">
+				<tr>
+					<td>Depart:</td>
+					<td>{{item.timeToDepart | formatDate}}</td>
+				</tr>
+				<tr>
+					<td>Arrive:</td>
+					<td>{{item.timeToArrive | formatDate}}</td>
+				</tr>
+				<tr>
+					<td>Travel Time:</td>
+					<td>{{item.travelTime}} {% if item.hasTolls %} Has Tolls {% endif %}</td>
+				</tr>
+				<tr>
+					<td>Last Updated:</td>
+					<td>{{item.lastUpdated | formatDate}}</td>
+				</tr>
+			</table>
+			{% if item.timeToLeave %}
+			<div class="large">
+				<div>Ready To Leave In</div>
+				<div class="bright">{{item.timeToLeave}}</div>
+			</div>
+			{% endif %}
+  </div>
+	{% endfor %}
+</div>
