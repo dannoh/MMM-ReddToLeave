@@ -3,6 +3,7 @@ Module.register("MMM-ReddToLeave", {
 		calendarNames: [],
 		mapsApiKey: "",
 		homeAddress: "",
+		dateFormat: "dddd, MMMM Do YYYY at h:mm:ss a",
     showDebugMessages: false,
     shortPollingStart: 60, //Minutes
     shortPollingInterval: 5, //Minutes
@@ -17,11 +18,12 @@ Module.register("MMM-ReddToLeave", {
 	getStyles() {
 		return [];
 	},
-
+	getScripts() {
+		return [ "moment.js" ]
+	},
 	getTemplate() {
 		return "templates/MMM-ReddToLeave.njk";
 	},
-
 	getTemplateData() {
 		return { displayItems: this.displayItems };
 	},
@@ -37,8 +39,9 @@ Module.register("MMM-ReddToLeave", {
 	},
 	addFilters() {
 		this.nunjucksEnvironment().addFilter("formatDate", (date) => {
-      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'  };
-      return date.toLocaleDateString(config.locale, options);s
+      //const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'  };
+      //return date.toLocaleDateString(config.locale, options);
+			return moment(date).format(this.config.dateFormat);
     });
 	},
 	updateDisplayItems() {

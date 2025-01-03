@@ -36,6 +36,7 @@ modules: [
 | `calendarNames` | <empty> | The names of the calendars you want monitored.  Empty will monitor all calendars. You can use the `name` property on your calendar config to give them names. |
 | `mapsApiKey` | '' | From the [Google Cloud Console](https://console.cloud.google.com/apis) Enable the Routes API and get an API key.  This is not entirely free, so be sure to understand your potential usage and costs and if exceeds the free options.  |
 | `homeAddress` | '' | Your home address, will be used by the Routes API to compute drive times. |
+| `dateFormat` | 'dddd, MMMM Do YYYY at h:mm:ss a' | Moment display format for the dates. |
 | `shortPollingStart` | 60 | How many minutes before departure should we start updating the drive time. See `shortPollingInterval` |
 | `shortPollingInterval` | 5 | Once we are in the short polling window (see `shortPollingStart`) how many minutes should we wait before updating the drive time again. |
 | `longPollingStart` | 120 | How many minutes before departure should we start updating the drive time. See `longPollingInterval` |
