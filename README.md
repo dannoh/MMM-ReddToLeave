@@ -1,9 +1,8 @@
-# Magic Mirror Module: MMM-ReddToLEave
+# Magic Mirror Module: MMM-ReddToLeave
 This [MagicMirror2](https://github.com/MichMich/MagicMirror) module allows you show a card containing information on when you 
 should leave to make your scheduled calendar events.
 
-![Condensed view screenshot](https://github.com/dannoh/mmm-redd-moon-phases/blob/main/images/condensed.png?raw=true)
-![Full view screenshot](https://github.com/dannoh/mmm-redd-moon-phases/blob/main/images/full.png?raw=true)
+![screenshot](https://github.com/dannoh/MMM-ReddToLeave/blob/main/images/screenshot.png?raw=true)
 ## Installation
 
 In your terminal, go to your MagicMirror's Module folder:

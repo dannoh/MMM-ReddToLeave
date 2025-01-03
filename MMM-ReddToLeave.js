@@ -188,7 +188,7 @@ Module.register("MMM-ReddToLeave", {
 			// Parse the response as JSON
 			const data = await response.json();
 			this.debug(data);
-			return {duration: +data.routes[0].duration.replace("s", ""), hasTolls: data.routes[0].warnings.includes("This route has tolls.") };
+			return {duration: +data.routes[0].duration.replace("s", ""), hasTolls: data.routes[0].warnings && data.routes[0].warnings.includes("This route has tolls.") };
 		} catch (error) {
 			console.error("Error:", error);
 		}
